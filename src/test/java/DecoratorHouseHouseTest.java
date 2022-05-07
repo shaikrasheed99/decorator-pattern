@@ -16,4 +16,11 @@ public class DecoratorHouseHouseTest {
 
         assertEquals("Base house with parking area", parkingAreaHouse.description());
     }
+
+    @Test
+    void shouldBeAbleToCreateHouseWithGardeningArea() {
+        GardeningHouse gardeningHouse = new GardeningHouse(new BaseHouse());
+
+        assertEquals("Base house with gardening area", gardeningHouse.description());
+    }
 }

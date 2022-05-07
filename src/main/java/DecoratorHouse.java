@@ -6,6 +6,6 @@ abstract public class DecoratorHouse implements House {
     }
 
     public String description() {
-        return "Base house";
+        return decoratedHouse.description();
     }
 }
