@@ -37,4 +37,11 @@ public class DecoratorHouseHouseTest {
 
         assertEquals("Base house with parking area with gardening area", baseHouseWithParkingAndGardeningArea.description());
     }
+
+    @Test
+    void shouldBeAbleToCreateBaseHouseWithParkingAndGardeningAreaAndIronGates() {
+        IronGatesHouse baseHouse = new IronGatesHouse(new GardeningHouse(new ParkingAreaHouse(new BaseHouse())));
+
+        assertEquals("Base house with parking area with gardening area with iron gates", baseHouse.description());
+    }
 }
