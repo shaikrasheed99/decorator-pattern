@@ -12,36 +12,36 @@ public class DecoratorHouseTest {
 
     @Test
     void shouldBeAbleToCreateBaseHouseWithParkingArea() {
-        ParkingAreaHouse parkingAreaHouse = new ParkingAreaHouse(new BaseHouse());
+        ParkingAreaHouse baseHouseWithParkingArea = new ParkingAreaHouse(new BaseHouse());
 
-        assertEquals("Base house with parking area", parkingAreaHouse.description());
+        assertEquals("Base house with parking area", baseHouseWithParkingArea.description());
     }
 
     @Test
     void shouldBeAbleToCreateBaseHouseWithGardeningArea() {
-        GardeningHouse gardeningHouse = new GardeningHouse(new BaseHouse());
+        GardeningHouse baseHouseWithGardeningArea = new GardeningHouse(new BaseHouse());
 
-        assertEquals("Base house with gardening area", gardeningHouse.description());
+        assertEquals("Base house with gardening area", baseHouseWithGardeningArea.description());
     }
 
     @Test
     void shouldBeAbleToCreateBaseHouseWithIronGates() {
-        IronGatesHouse ironGatesHouse = new IronGatesHouse(new BaseHouse());
+        IronGatesHouse baseHouseWithIronGates = new IronGatesHouse(new BaseHouse());
 
-        assertEquals("Base house with iron gates", ironGatesHouse.description());
+        assertEquals("Base house with iron gates", baseHouseWithIronGates.description());
     }
 
     @Test
     void shouldBeAbleToCreateBaseHouseWithParkingAreaWithGardeningAre() {
-        GardeningHouse baseHouseWithParkingAndGardeningArea = new GardeningHouse(new ParkingAreaHouse(new BaseHouse()));
+        GardeningHouse baseHouseWithParkingAreaAndGardeningArea = new GardeningHouse(new ParkingAreaHouse(new BaseHouse()));
 
-        assertEquals("Base house with parking area with gardening area", baseHouseWithParkingAndGardeningArea.description());
+        assertEquals("Base house with parking area with gardening area", baseHouseWithParkingAreaAndGardeningArea.description());
     }
 
     @Test
     void shouldBeAbleToCreateBaseHouseWithParkingAreaWithGardeningAreaWithIronGates() {
-        IronGatesHouse baseHouse = new IronGatesHouse(new GardeningHouse(new ParkingAreaHouse(new BaseHouse())));
+        IronGatesHouse baseHouseWithParkingAndGardeningAreaAndIronGates = new IronGatesHouse(new GardeningHouse(new ParkingAreaHouse(new BaseHouse())));
 
-        assertEquals("Base house with parking area with gardening area with iron gates", baseHouse.description());
+        assertEquals("Base house with parking area with gardening area with iron gates", baseHouseWithParkingAndGardeningAreaAndIronGates.description());
     }
 }
