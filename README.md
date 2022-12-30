@@ -8,4 +8,4 @@
 
 ## Class Diagram:
 
-![](class-diagram/decorator-pattern-house.png)
+![Decorator Pattern](class-diagram/decorator-pattern-house.png)
